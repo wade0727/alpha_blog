@@ -9,13 +9,49 @@
 
 <%= form_for @article do |f| %>
   <p>
-    <%= f.label :title %></br>
+    <%= f.label :title, 'Job Number' %></br>
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :description %></br>
+    <%= f.label :description, 'Damage Repair Notations:' %></br>
     <%= f.text_area :description %>
   </p>
+  
+  <p>
+    <%= f.label :street %></br>
+    <%= f.text_field :street %>
+  </p>
+  
+  <p>
+    <%= f.label :city %></br>
+    <%= f.text_field :city %>
+  </p>
+  
+  <p>
+    <%= f.label :zip %></br>
+    <%= f.text_field :zip %>
+  </p>
+  
+  <p>
+    <%= f.label :subdivision %></br>
+    <%= f.text_field :subdivision %>
+  </p>
+  
+  <p>
+    <%= f.label :node %></br>
+    <%= f.text_field :node %>
+  </p>
+  
+  <p>
+    <%= f.label :key %></br>
+    <%= f.text_field :key %>
+  </p>
+  
+  <p>
+    <%= f.label :print %></br>
+    <%= f.text_field :print %>
+  </p>
+  
   <p>
     <%= f.submit %>
   </p>

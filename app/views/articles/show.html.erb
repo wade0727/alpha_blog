@@ -1,11 +1,23 @@
-<h1>showing article</h1>
+<h1>Showing Plant Damage Report</h1>
 
 <p>
-    Title: <%= @article.title %>
+    Job Number <%= @article.title %>
 </p>
 
 <p>
-    description: <%= @article.description %>
+    Node <%= @article.node %>
+</p>
+
+<p>
+    Street <%= @article.street %>
+</p>
+
+<p>
+    Zip Code <%= @article.zip %>
+</p>
+
+<p>
+    Damage Repair Notations <%= @article.description %>
 </p>
 
 <%= link_to "Edit this article", edit_article_path(@article) %> |
