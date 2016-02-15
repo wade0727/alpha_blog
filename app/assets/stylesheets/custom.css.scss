@@ -2,13 +2,39 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
   background: url(polelines.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: rgba(16, 16, 16, 0.5);
+}
 
+.footer-text {
+  color: #fff;
+  text-align: left;
+  position: relative;
+  margin-top: 18px;
+  font-size: 0.8em;
+}
+
+.footer-text a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #logo {
@@ -26,8 +52,9 @@ body {
 }
 
 // jumbotron styles
-.center {
+.xpmhead {
   text-align: center;
   color: #fff;
+  margin-top: 100px;
 }
 
