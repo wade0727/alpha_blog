@@ -7,57 +7,71 @@
     </ul>
 <% end %>
 
-<div class="well">
-  <%= form_for @article do |f| %>
-    <p>
-      <%= f.label :title, 'Job Number' %></br>
-      <%= f.text_field :title %>
-    </p>
-    <p>
-      <%= f.label :description, 'Damage Repair Notations:' %></br>
-      <%= f.text_area :description %>
-    </p>
-    
-    <p>
-      <%= f.label :street %></br>
-      <%= f.text_field :street %>
-    </p>
-    
-    <p>
-      <%= f.label :city %></br>
-      <%= f.text_field :city %>
-    </p>
-    
-    <p>
-      <%= f.label :zip %></br>
-      <%= f.text_field :zip %>
-    </p>
-    
-    <p>
-      <%= f.label :subdivision %></br>
-      <%= f.text_field :subdivision %>
-    </p>
-    
-    <p>
-      <%= f.label :node %></br>
-      <%= f.text_field :node %>
-    </p>
-    
-    <p>
-      <%= f.label :key %></br>
-      <%= f.text_field :key %>
-    </p>
-    
-    <p>
-      <%= f.label :print %></br>
-      <%= f.text_field :print %>
-    </p>
-    
-    <p>
-      <%= f.submit %>
-    </p>
-  
-  <% end %>
-  
-  <%= link_to "Back to articles listing", articles_path %>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="well">
+      <%= form_for @article do |f| %>
+      <div class="form-group col-xs-3">
+        <%= f.label :title, 'Job Number' %>
+        <%= f.text_field :title, class: "form-control", placeholder: "JB123456" %>
+      </div>
+      
+      <div class="form-group col-xs-3">
+        <label for="exampleInputEmail1">Blank Field</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Blank Field">
+      </div>
+      
+      <div class="form-group col-xs-6">
+        <label for="exampleInputEmail1">Blank Field</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Blank Field">
+      </div>
+
+      <div class="form-group">
+        <%= f.label :street %>
+        <%= f.text_field :street, class: "form-control", placeholder: "Street Address" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, class: "form-control", placeholder: "City" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :zip %>
+        <%= f.text_field :zip, class: "form-control", placeholder: "Zip" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :subdivision %>
+        <%= f.text_field :subdivision, class: "form-control", placeholder: "Subdivision" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :node %>
+        <%= f.text_field :node, class: "form-control", placeholder: "Node Number" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :key %>
+        <%= f.text_field :key, class: "form-control", placeholder: "Key Map Page" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :print %>
+        <%= f.text_field :print, class: "form-control", placeholder: "Print Page" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :description, 'Damage Repair Notations:' %>
+        <%= f.text_area :description, rows: 6, class: "form-control", placeholder: "Enter Repair Notations... Replace from what to where...etc." %>
+      </div>
+      
+      <%= f.submit 'Submit PDR', class: 'btn btn-success' %>
+      
+      
+      <% end %>
+      
+      [ <%= link_to "Cancel PDR and Return to Index", articles_path %> ]
+    </div>
+  </div>
 </div>
