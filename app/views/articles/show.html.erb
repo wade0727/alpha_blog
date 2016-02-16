@@ -1,25 +1,40 @@
-<h1>Showing Plant Damage Report</h1>
+<div class="well">
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <h1 align="center">Plant Damage Report: <%= @article.title %> </h1>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Job Number</th>
+            <th>Node</th>
+            <th>Street</th>
+            <th>Zip Code</th>
+            <th>Damage Repair Notations</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><%= @article.title %></td>
+            <td><%= @article.node %></td>
+            <td><%= @article.street %></td>
+            <td><%= @article.zip %></td>
+            <td><%= @article.description %></td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  <div class="pdr-actions">
+    <%= link_to "Edit this PDR", edit_article_path(@article), class: "btn btn-xs btn-info" %>
+    <%= link_to "Delete this PDR", article_path(@article), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+    <%= link_to "Back PDR Listings", articles_path, class: "btn btn-xs btn-success" %>
+  </div>
+</div>
 
-<p>
-    Job Number <%= @article.title %>
-</p>
 
-<p>
-    Node <%= @article.node %>
-</p>
 
-<p>
-    Street <%= @article.street %>
-</p>
 
-<p>
-    Zip Code <%= @article.zip %>
-</p>
 
-<p>
-    Damage Repair Notations <%= @article.description %>
-</p>
 
-<%= link_to "Edit this article", edit_article_path(@article) %> |
-<%= link_to "Back to articles listing", articles_path %>
 
