@@ -1,10 +1,9 @@
 <div class="well">
   <div class="table-responsive">
     <table class="table table-bordered">
-      <h1 align="center">Plant Damage Report: <%= @article.title %> </h1>
+      <h1 align="center">Plant Damage Report: <span class="label-color"><%= @article.title %></span></h1>  
         <thead>
           <tr>
-            <th>#</th>
             <th>Job Number</th>
             <th>Node</th>
             <th>Street</th>
@@ -15,7 +14,6 @@
         
         <tbody>
           <tr>
-            <th scope="row">1</th>
             <td><%= @article.title %></td>
             <td><%= @article.node %></td>
             <td><%= @article.street %></td>

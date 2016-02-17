@@ -59,12 +59,13 @@
         <%= f.text_area :description, rows: 6, class: "form-control", placeholder: "Enter Repair Notations... Replace from what to where...etc." %>
       </div>
       
-      <%= f.submit 'Submit PDR', class: 'btn btn-success' %>
-      
-      
+      <div>
+        <%= f.submit 'Submit PDR', class: 'btn btn-xs btn-success' %>
+        <%= link_to "Discard Changes", articles_path, class: 'btn btn-xs btn-warning' %>
+      </div>
       <% end %>
       
-      [ <%= link_to "Cancel PDR and Return to Index", articles_path %> ]
+      
     </div>
   </div>
 </div>
