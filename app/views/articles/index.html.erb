@@ -9,6 +9,8 @@
       <th>Street</th>
       <th>Zip Code</th>
       <th>Damage Repair Notations</th>
+      <th>Created By</th>
+      <th>Date Created</th>
     </tr>
     
 <% @articles.each do |article| %>
@@ -19,6 +21,8 @@
       <td><%= article.street %></td>
       <td><%= article.zip %></td>
       <td><%= truncate(article.description, length: 30) %></td>
+      <td><%= article.user.username if article.user %></td>
+      <td><%= article.created_at.strftime("%A, %d %b %Y %l:%M %p") %></td>
     </tr>
 <% end %>
   </table>
