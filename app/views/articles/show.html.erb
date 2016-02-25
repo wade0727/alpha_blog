@@ -9,6 +9,7 @@
             <th>Street</th>
             <th>Zip Code</th>
             <th>Damage Repair Notations</th>
+            <th>Created By</th>
           </tr>
         </thead>
         
@@ -19,6 +20,7 @@
             <td><%= @article.street %></td>
             <td><%= @article.zip %></td>
             <td><%= @article.description %></td>
+            <td><%= link_to @article.user.username, user_path(@article.user) %></td>
           </tr>
         </tbody>
     </table>
