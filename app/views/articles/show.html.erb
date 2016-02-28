@@ -26,8 +26,10 @@
     </table>
   </div>
   <div class="pdr-actions">
-    <%= link_to "Edit this PDR", edit_article_path(@article), class: "btn btn-xs btn-info" %>
-    <%= link_to "Delete this PDR", article_path(@article), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+    <% if logged_in? && current_user == @article.user %> 
+      <%= link_to "Edit this PDR", edit_article_path(@article), class: "btn btn-xs btn-info" %>
+      <%= link_to "Delete this PDR", article_path(@article), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+    <% end %>
     <%= link_to "Back PDR Listings", articles_path, class: "btn btn-xs btn-success" %>
   </div>
 </div>
