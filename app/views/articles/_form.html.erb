@@ -4,64 +4,64 @@
   <div class="col-xs-12">
     <div class="well">
       <%= form_for @article do |f| %>
-      <div class="form-group col-xs-3">
+      <div class="form-group col-xs-4">
         <%= f.label :title, 'Job Number' %>
         <%= f.text_field :title, class: "form-control", placeholder: "JB123456" %>
       </div>
       
-      <div class="form-group col-xs-3">
-        <label for="exampleInputEmail1">Blank Field</label>
+      <div class="form-group col-xs-4">
+        <label>Blank Field</label>
         <!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Blank Field">-->
         <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
       </div>
       
-      <div class="form-group col-xs-6">
-        <label for="exampleInputEmail1">Blank Field</label>
+      <div class="form-group col-xs-4">
+        <label>Blank Field</label>
         <!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Blank Field">-->
         <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
       </div>
 
-      <div class="form-group">
+      <div class="form-group col-xs-12">
         <%= f.label :street %>
         <%= f.text_field :street, class: "form-control", placeholder: "Street Address" %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group col-xs-6">
         <%= f.label :city %>
         <%= f.text_field :city, class: "form-control", placeholder: "City" %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group col-xs-6">
         <%= f.label :zip %>
         <%= f.text_field :zip, class: "form-control", placeholder: "Zip" %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group col-xs-6">
         <%= f.label :subdivision %>
         <%= f.text_field :subdivision, class: "form-control", placeholder: "Subdivision" %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group col-xs-6">
         <%= f.label :node %>
         <%= f.text_field :node, class: "form-control", placeholder: "Node Number" %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group col-xs-6">
         <%= f.label :key %>
         <%= f.text_field :key, class: "form-control", placeholder: "Key Map Page" %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group col-xs-6">
         <%= f.label :print %>
         <%= f.text_field :print, class: "form-control", placeholder: "Print Page" %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group col-xs-12">
         <%= f.label :description, 'Damage Repair Notations:' %>
         <%= f.text_area :description, rows: 6, class: "form-control", placeholder: "Enter Repair Notations... Replace from what to where...etc." %>
       </div>
       
-      <div>
+      <div class="form-group">
         <%= f.submit 'Submit PDR', class: 'btn btn-xs btn-success' %>
         <%= link_to "Discard Changes", articles_path, class: 'btn btn-xs btn-warning' %>
       </div>
