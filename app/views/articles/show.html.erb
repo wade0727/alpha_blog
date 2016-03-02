@@ -1,29 +1,82 @@
 <div class="well">
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <h1 align="center">Plant Damage Report: <span class="label-color"><%= @article.title %></span></h1>  
-        <thead>
-          <tr>
-            <th>Job Number</th>
-            <th>Node</th>
-            <th>Street</th>
-            <th>Zip Code</th>
-            <th>Damage Repair Notations</th>
-            <th>Created By</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr>
-            <td><%= @article.title %></td>
-            <td><%= @article.node %></td>
-            <td><%= @article.street %></td>
-            <td><%= @article.zip %></td>
-            <td><%= @article.description %></td>
-            <td><%= link_to @article.user.username, user_path(@article.user) %></td>
-          </tr>
-        </tbody>
-    </table>
+  <div class="page-header">
+    <h2 align="center">Plant Damage Report: <span class="label-color"><%= @article.title %></span><small> Created By - <%= link_to @article.user.username, user_path(@article.user) %></small></h3>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-heading">Location</div>
+   
+          <table class="table">
+            <tr>
+              <td><b>Node:</b></td>
+              <td><%= @article.node %></td>
+            </tr>
+            <tr>
+              <td><b>Street:</b></td>
+              <td><%= @article.street %></td>
+            </tr>
+            <tr>
+              <td><b>City:</b></td>
+              <td><%= @article.city %></td>
+            </tr>
+            <tr>
+              <td><b>Zip Code:</b></td>
+              <td><%= @article.zip %></td>
+            </tr>
+            <tr>
+              <td><b>Subdivision:</b></td>
+              <td><%= @article.subdivision %></td>
+            </tr>
+            <tr>
+              <td><b>Key Map:</b></td>
+              <td><%= @article.key %></td>
+            </tr>
+            <tr>
+              <td><b>Print Page:</b></td>
+              <td><%= @article.print %></td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-heading">Damage Repair Notations</div>
+   
+          <table class="table">
+            <tr>
+              <td><b>Notes:</b></td>
+              <td><%= @article.description %></td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-heading">Plant Details</div>
+   
+          <table class="table">
+            <tr>
+              <td><b>Plant Type:</b></td>
+              <td><%= @article.plant_type %></td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    
+      <div class="col-md-12">
+        <div class="panel panel-info">
+          <div class="panel-heading">Damage Repair Notations</div>
+     
+            <table class="table">
+              <tr>
+                <td><b>Notes:</b></td>
+                <td><%= @article.description %></td>
+              </tr>
+            </table>
+        </div>
+      </div>
+
   </div>
   <div class="pdr-actions">
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %> 

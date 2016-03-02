@@ -10,9 +10,10 @@
       </div>
       
       <div class="form-group col-xs-4">
-        <label>Blank Field</label>
-        <!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Blank Field">-->
-        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+        <%= f.label :plant, 'Plant (Type):' %>
+        <div class="controls">
+          <%= f.select(:plant_type, options_for_select([[ 'Underground', 'Underground'], [ 'Aerial', 'Aerial'], [ 'Both', 'Both' ]], :selected => @article.plant_type), {}, {class: "form-control"}) %>
+        </div>
       </div>
       
       <div class="form-group col-xs-4">
