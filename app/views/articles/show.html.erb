@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-md-4">
       <div class="panel panel-warning">
-        <div class="panel-heading">Location</div>
+        <div class="panel-heading"><span class="glyphicon glyphicon-home"></span>  Location</div>
    
           <table class="table">
             <tr>
@@ -41,7 +41,7 @@
     </div>
     <div class="col-md-4">
       <div class="panel panel-warning">
-        <div class="panel-heading">Damage Repair Notations</div>
+        <div class="panel-heading"><span class="glyphicon glyphicon-pencil"></span> Damage Repair Notations</div>
    
           <table class="table">
             <tr>
@@ -53,7 +53,7 @@
     </div>
     <div class="col-md-4">
       <div class="panel panel-warning">
-        <div class="panel-heading">Plant Details</div>
+        <div class="panel-heading"><i class="fa fa-info"></i>  Plant Details</div>
    
           <table class="table">
             <tr>
@@ -66,7 +66,7 @@
     
       <div class="col-md-12">
         <div class="panel panel-info">
-          <div class="panel-heading">Damage Repair Notations</div>
+          <div class="panel-heading"><span class="glyphicon glyphicon-pencil"></span> Damage Repair Notations</div>
      
             <table class="table">
               <tr>
@@ -80,9 +80,19 @@
   </div>
   <div class="pdr-actions">
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %> 
-      <%= link_to "Edit this PDR", edit_article_path(@article), class: "btn btn-xs btn-info" %>
-      <%= link_to "Delete this PDR", article_path(@article), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+      <%= link_to edit_article_path(@article), class: "btn btn-xs btn-info" do %>
+        <i class="fa fa-pencil-square-o"></i>
+        Edit this PDR
+        <% end %>
+      <%= link_to article_path(@article), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure?"} do %>
+        <i class="fa fa-trash"></i>
+        Delete this PDR
+        <% end %>
     <% end %>
-    <%= link_to "Back PDR Listings", articles_path, class: "btn btn-xs btn-success" %>
+    <%= link_to articles_path, class: "btn btn-xs btn-success" do %>
+      <i class="fa fa-reply"></i>
+      Back PDR Listings
+      <% end %>
   </div>
 </div>
+ 
