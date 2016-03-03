@@ -9,31 +9,31 @@
    
           <table class="table">
             <tr>
-              <td><b>Node:</b></td>
+              <td><strong>Node:</strong></td>
               <td><%= @article.node %></td>
             </tr>
             <tr>
-              <td><b>Street:</b></td>
+              <td><strong>Street:</strong></td>
               <td><%= @article.street %></td>
             </tr>
             <tr>
-              <td><b>City:</b></td>
+              <td><strong>City:</strong></td>
               <td><%= @article.city %></td>
             </tr>
             <tr>
-              <td><b>Zip Code:</b></td>
+              <td><strong>Zip Code:</strong></td>
               <td><%= @article.zip %></td>
             </tr>
             <tr>
-              <td><b>Subdivision:</b></td>
+              <td><strong>Subdivision:</strong></td>
               <td><%= @article.subdivision %></td>
             </tr>
             <tr>
-              <td><b>Key Map:</b></td>
+              <td><strong>Key Map:</strong></td>
               <td><%= @article.key %></td>
             </tr>
             <tr>
-              <td><b>Print Page:</b></td>
+              <td><strong>Print Page:</strong></td>
               <td><%= @article.print %></td>
             </tr>
           </table>
@@ -45,7 +45,7 @@
    
           <table class="table">
             <tr>
-              <td><b>Notes:</b></td>
+              <td><strong>Notes:</strong></td>
               <td><%= @article.description %></td>
             </tr>
           </table>
@@ -57,8 +57,28 @@
    
           <table class="table">
             <tr>
-              <td><b>Plant Type:</b></td>
+              <td><strong>Plant Type:</strong></td>
               <td><%= @article.plant_type %></td>
+            </tr>
+            <tr class="danger">
+              <td><strong>Fiber Count:</strong></td>
+              <td><code>"placeholder"</code></td>
+            </tr>
+            <tr class="danger">
+              <td><strong>Coax Size:</strong></td>
+              <td><code>"placeholder"</code></td>
+            </tr>
+            <tr class="danger">
+              <td><strong>Depth of Cable:</strong></td>
+              <td><code>"placeholder"</code></td>
+            </tr>
+              <tr class="danger">
+              <td><strong>Plant Located:</strong></td>
+              <td><code>"placeholder"</code></td>
+            </tr>
+            <tr class="danger">
+              <td><strong>Cable in Conduit:</strong></td>
+              <td><code>"placeholder"</code></td>
             </tr>
           </table>
       </div>
@@ -70,7 +90,7 @@
      
             <table class="table">
               <tr>
-                <td><b>Notes:</b></td>
+                <td><strong>Notes:</strong></td>
                 <td><%= @article.description %></td>
               </tr>
             </table>
