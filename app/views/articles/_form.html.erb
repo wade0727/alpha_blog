@@ -9,17 +9,22 @@
         <%= f.text_field :title, class: "form-control", placeholder: "JB123456" %>
       </div>
       
-      <div class="form-group col-xs-4">
+      <div class="form-group col-xs-3">
         <%= f.label :plant, 'Plant (Type):' %>
         <div class="controls">
           <%= f.select(:plant_type, options_for_select([[ 'Underground', 'Underground'], [ 'Aerial', 'Aerial'], [ 'Both', 'Both' ]], :selected => @article.plant_type), {}, {class: "form-control"}) %>
         </div>
       </div>
       
-      <div class="form-group col-xs-4">
-        <label>Blank Field</label>
-        <!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Blank Field">-->
-        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+      <div class="row">
+        <div class="col-xs-5">
+          <div class="input-group cb-box">
+            <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+            <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+          <% end %>
+            
+          </div>
+        </div>
       </div>
 
       <div class="form-group col-xs-12">
