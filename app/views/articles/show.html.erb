@@ -13,18 +13,6 @@
               <td><%= @article.node %></td>
             </tr>
             <tr>
-              <td><strong>Street:</strong></td>
-              <td><%= @article.street %></td>
-            </tr>
-            <tr>
-              <td><strong>City:</strong></td>
-              <td><%= @article.city %></td>
-            </tr>
-            <tr>
-              <td><strong>Zip Code:</strong></td>
-              <td><%= @article.zip %></td>
-            </tr>
-            <tr>
               <td><strong>Subdivision:</strong></td>
               <td><%= @article.subdivision %></td>
             </tr>
@@ -36,17 +24,21 @@
               <td><strong>Print Page:</strong></td>
               <td><%= @article.print %></td>
             </tr>
+            <tr>
+              <td><strong>Address:</strong></td>
+              <td><%= @article.street %></br><%= @article.city %>, <%= @article.zip %></td>
+            </tr>
           </table>
       </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-warning">
-        <div class="panel-heading"><span class="glyphicon glyphicon-pencil"></span> Damage Repair Notations</div>
-   
-          <table class="table">
+        <div class="panel-heading"><span class="glyphicon glyphicon-warning-sign"></span> Damage Repair Category</div>
+          <table class="table table-hover">
             <tr>
-              <td><strong>Notes:</strong></td>
-              <td><%= @article.description %></td>
+              <% if @article.categories.any? %>
+                <%= render @article.categories %>
+              <% end %>
             </tr>
           </table>
       </div>
